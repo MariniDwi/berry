@@ -1,3 +1,7 @@
+if (localStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html'; // Ganti dengan nama file login kamu
+  }
+
 let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 let controlIcon = document.getElementById("controlIcon");
