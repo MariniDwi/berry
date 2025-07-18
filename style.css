@@ -1,0 +1,324 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Jua", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    /* background-color: #FAF2DD; */
+    background-color: #F9ADB7;
+    text-align: center;
+}
+
+/* Navbar Section */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FAF2DD;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #E981A4;
+}
+
+/* Hero Section */
+.hero {
+    margin: 110px 50px 70px 50px;
+    height: 450px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: left; 
+    /* background-color: #F9ADB7;  */
+    background-color: #FAF2DD; 
+    border-radius: 12px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.button {
+    background-color: #dacafd;
+    color: #42326E;
+    font-size: larger;
+    font-weight: 800;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #42326E;
+    color: #dacafd;
+}
+
+.music {
+    background: #F9ADB7;
+    width: 270px;
+    height: 380px;
+    padding: 25px 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    border-radius: 14px;
+}
+
+.music .song-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music .song-container .circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #E981A4;
+    background: #FAF2DD;
+    margin-top: 9px;
+}
+
+.music .song-img {
+    width: 200px;
+}
+
+.music audio {
+    width: 100px;
+}
+
+.music .song-text {
+    color: #FAF2DD;
+    margin-bottom: 6px;
+}
+
+#progress {
+    -webkit-appearance: none;
+    width: 250px;
+    height: 2px;
+    background: #FAF2DD;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+#progress:focus {
+    outline: none;
+}
+
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: #F9ADB7;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    border: 4px solid #fff;
+}
+/* wishes Section */
+.wishes {
+    height: 800px;
+}
+
+.wishes h2 {
+    color: #FAF2DD;
+}
+
+.wishes h2, .message h2 {
+    margin-bottom: 40px;
+    font-size: 45px;
+}
+.wishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    position: relative;
+
+}
+
+.wishes-card {
+    text-align: center;
+    padding:  2rem;
+    background: #FAF2DD;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wishes-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1px 7px #FAF2DD;
+}
+
+.wishes-card i {
+    font-size: 2.5rem;
+    color: #EEB76B;
+    margin-bottom: 1rem;
+}
+
+.wishes-card h3 {
+    margin-bottom: 1rem;
+    color: #FAF2DD;
+    background-color: #E981A4;
+    width: 170px;
+    border-radius: 7px;
+    margin-top: -40px;
+}
+
+.wishes-card p{
+    color:#f579a2;
+}
+
+.wishes-card img {
+    width: 250px;
+    padding-top: 20px;
+}
+
+.bias{
+    width: 170px;
+    margin-top: -9rem;
+}
+
+/* message Section */
+.message {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.private-message p {
+    font-size: 18px;
+    max-width: 800px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #f6ebcd;
+    color: #E981A4;
+    padding: 1rem 2rem 1rem;
+    font-weight: 700;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: 570px;
+        margin: 55px 20px 50px 20px;
+        
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-content p{
+        text-align: center;
+    }
+
+    .music {
+        margin-top: -5rem;
+        width: 90%;
+        height: 180px;
+        display: flex;
+        flex-direction: row;
+        gap: 4%;
+    }
+
+    #progress {
+        width: 100%;
+    }
+
+    .music .song-img {
+        width: 110px;
+    }
+
+    .music .circle {
+        margin: auto;
+        width: 30px;
+        height: 30px;
+    }
+
+    .song-text h3{
+        font-size: 18px;
+    }
+
+    .song-text p {
+        font-size: 15px;
+    }
+
+    .wishes {
+        height: 1200px;
+    }
+
+    .wishes h2 {
+        font-size: 2rem;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .wishes .wishes-card {
+        width: 300px;
+        margin: auto;
+    }
+
+    .message {
+        margin-top: 53rem;
+        height: 450px;
+    }
+
+    .message h2 {
+        font-size: 2.5rem;
+        margin-top: 43px;
+        margin-bottom: 0;
+    }
+
+    .message p {
+        max-width: 300px;
+    }
+
+    .private-message p {
+        font-size: 16px;
+    }
+}

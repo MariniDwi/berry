@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Nana's Birthday</div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Happy Birthday!</h1>
+        <p>Play the song before you scroll down, seng!</p>
+      </div>
+      <div class="music">
+        <div class="album">
+          <img src="./assets/song-cover.png" alt="song-img" class="song-img" />
+        </div>
+
+        <div class="song-container">
+          <div class="song-text">
+            <h3>Special For You</h3>
+            <p>Your Love</p>
+          </div>
+          <audio src="assets/BTS (방탄소년단) - Life Goes On Piano Cover.mp3" id="song"></audio>
+          <input type="range" value="0" id="progress" />
+          <div class="circle">
+            <div onclick="playPause()">
+              <i class="fa-solid fa-play" id="controlIcon"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- wishes Section -->
+    <section id="wishes" class="wishes">
+      <h2>Birthday Wishes from Your Favorite Idols</h2>
+      <div class="wishes-grid">
+        <div class="wishes-card">
+          <img src="/assets/jungkook.png" alt="Jungkook" class="bias">
+          <h3>Jungkook</h3>
+          <p>
+            "Jalani hidupmu, bagaimanapun juga itu milikmu. Jangan berusaha terlalu keras; tidak apa-apa untuk kalah. Hidup bukanlah tentang menjadi sempurna, ini tentang mewujudkan impianmu."
+          </p>
+        </div>
+        <div class="wishes-card">
+          <img src="/assets/taehyung.png" alt="Taehyung" class="bias">
+          <h3>Taehyung</h3>
+          <p>
+            "Jangan terjebak dalam mimpi orang lain. Usaha membentukmu. Kamu akan menyesal suatu hari nanti jika kamu tidak melakukan yang terbaik sekarang. Jika kamu tidak bekerja keras, tidak akan ada hasil yang baik."
+          </p>
+        </div>
+        <div class="wishes-card">
+          <img src="/assets/mingyu.png" alt="Mingyu" class="bias">
+          <h3>Mingyu</h3>
+          <p>
+            "Ada yang datang, ada yang pergi. Ada yang sayang, ada yang benci. Hidup tak hanya berisi hal-hal yang disukai. Kamu harus mencoba yang terbaik untuk segala sesuatu dalam hidup. Jangan menyerah!"
+          </p>
+        </div>
+        <div class="wishes-card">
+          <img src="/assets/scoups.png" alt="Seungcheol" class="bias" style="padding-top: 30px;">
+          <h3>Seungcheol</h3>
+          <p>
+            "Setiap orang memiliki alasan saat merasa kesulitan. Tidak semua orang tahu kesulitan masing-masing, tetapi kamu bisa selalu ada untuk orang itu dan menghirup udara segar bersama dengan mereka."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- message Section -->
+    <section id="message" class="message">
+      <h2>Hey Nana!</h2>
+      <div class="private-message">
+        <p>
+          Happy birthday to someone truly amazing! You have a special light that brightens the lives of those around you. May this year be filled with new adventures, the courage to move forward, and achievements that make you proud. Keep dreaming and make them come true, one by one. You truly deserve all the good things life has to offer!
+        </p>
+
+        <p>— Lyly —</p>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Lyly. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

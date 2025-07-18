@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Admin</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F9ADB7;
+      color: #E981A4;
+      font-family: "Jua", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .login-header {
+      background-color:#FAF2DD;
+      color: #E981A4;
+      font-size: 20px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .login-header h4 {
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .login-body {
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      font-family: "Jua", sans-serif;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #E981A4;
+      color: #E981A4;
+      font-size: 18px;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+        outline: none;
+    }
+
+    .btn-submit {
+      font-family: "Jua", sans-serif;
+      width: 100%;
+      padding: 10px;
+      background-color: #FAF2DD;
+      border: none;
+      color: #E981A4;
+      font-weight: 400;
+      font-size: 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background-color:rgb(247, 239, 202);
+      transition-duration: 0.4s;
+    }
+
+    .alert {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #f5c6cb;
+      border-radius: 4px;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+<div class="login-container">
+  <div class="login-header">
+    <h4>Login Admin</h4>
+  </div>
+  <div class="login-body">
+    <div id="alert" class="alert" style="display: none;"></div>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" required autofocus>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit" class="btn-submit">Masuk</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const alertBox = document.getElementById('alert');
+
+    // Daftar username yang diperbolehkan
+    const allowedUsers = ['nana', 'yaya', 'lyly'];
+    const correctPassword = 'lylycantik';
+
+    if (allowedUsers.includes(username) && password === correctPassword) {
+      localStorage.setItem('isLoggedIn', 'true');
+      window.location.href = 'index.html'; // Ganti dengan halaman tujuanmu
+    } else {
+      alertBox.textContent = "Username atau password salah!";
+      alertBox.style.display = 'block';
+    }
+  });
+</script>
+
+
+</body>
+</html>
